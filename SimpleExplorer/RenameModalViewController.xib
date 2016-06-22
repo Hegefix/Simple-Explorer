@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RenameModalViewController">
+            <connections>
+                <outlet property="text" destination="KUM-yK-Edn" id="bfI-9G-wBE"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-yK-Edn">
+                    <rect key="frame" x="0.0" y="20" width="360" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="gfk-tj-0hI"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="eQC-4t-giu">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-uK-XfR">
+                    <rect key="frame" x="0.0" y="-1" width="180" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="i9d-8z-ifF"/>
+                    </constraints>
+                    <buttonCell key="cell" type="smallSquare" title="OK" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sdx-TX-NPn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="11"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="okButtonClick:" target="-2" id="emA-Jl-4Bz"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wzu-wA-BVd">
+                    <rect key="frame" x="180" y="-1" width="180" height="22"/>
+                    <buttonCell key="cell" type="smallSquare" title="Cancel" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J1y-0c-G92">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="11"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancelButtonClick:" target="-2" id="B30-kJ-1Ri"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cgl-uK-XfR" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3Pn-oa-WOo"/>
+                <constraint firstItem="KUM-yK-Edn" firstAttribute="trailing" secondItem="wzu-wA-BVd" secondAttribute="trailing" id="3X3-9U-8pm"/>
+                <constraint firstItem="cgl-uK-XfR" firstAttribute="baseline" secondItem="wzu-wA-BVd" secondAttribute="baseline" id="8fs-aJ-kJI"/>
+                <constraint firstItem="wzu-wA-BVd" firstAttribute="leading" secondItem="cgl-uK-XfR" secondAttribute="trailing" id="9Wa-1b-dIn"/>
+                <constraint firstAttribute="trailing" secondItem="wzu-wA-BVd" secondAttribute="trailing" id="BiC-Ws-1Bz"/>
+                <constraint firstItem="wzu-wA-BVd" firstAttribute="top" secondItem="KUM-yK-Edn" secondAttribute="bottom" id="Jbe-il-CIM"/>
+                <constraint firstAttribute="bottom" secondItem="wzu-wA-BVd" secondAttribute="bottom" id="UgI-ze-cy4"/>
+                <constraint firstAttribute="bottom" secondItem="KUM-yK-Edn" secondAttribute="bottom" constant="20" symbolic="YES" id="We4-9O-gbp"/>
+                <constraint firstItem="cgl-uK-XfR" firstAttribute="leading" secondItem="KUM-yK-Edn" secondAttribute="leading" id="bFv-Rf-3js"/>
+                <constraint firstItem="cgl-uK-XfR" firstAttribute="firstBaseline" secondItem="wzu-wA-BVd" secondAttribute="firstBaseline" id="oit-34-m0Z"/>
+            </constraints>
+            <point key="canvasLocation" x="415" y="168"/>
+        </customView>
+    </objects>
+</document>
