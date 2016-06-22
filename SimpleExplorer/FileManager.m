@@ -124,7 +124,7 @@ NSString *const CreateKey=@"Создать папку";
 #pragma mark - Копирование файла -
 
 - (void)copyItem:(Item *)item {
-    NSLog(@"Copy: %@",item.path);
+    //NSLog(@"Copy: %@",item.path);
     
     if (self.copiedItem != nil) {
         
@@ -147,7 +147,7 @@ NSString *const CreateKey=@"Создать папку";
 }
 
 - (BOOL)pasteItem:(Item *)item {
-    NSLog(@"Paste: %@",item.path);
+    //NSLog(@"Paste: %@",item.path);
     
     if (self.copiedItem == nil) {
         return false;
@@ -175,7 +175,7 @@ NSString *const CreateKey=@"Создать папку";
 #pragma mark - Удаление файла -
 
 - (void)deleteItem:(Item *)item {
-    NSLog(@"Delete %@",item.path);
+    //NSLog(@"Delete %@",item.path);
     
     NSError *error = nil;
     [self->fileManager removeItemAtPath:item.path error:&error];
@@ -187,7 +187,7 @@ NSString *const CreateKey=@"Создать папку";
 #pragma mark - Переименование файла -
 
 - (void)renameItem:(Item *)item NewPath:(NSString *)newPath {
-    NSLog(@"Rename: %@ New path: %@",item.path,newPath);
+    //NSLog(@"Rename: %@ New path: %@",item.path,newPath);
     
     NSError *error = nil;
     [self->fileManager moveItemAtPath:item.path toPath:newPath error:&error];
@@ -199,7 +199,7 @@ NSString *const CreateKey=@"Создать папку";
 #pragma mark - Создание файла -
 
 - (void)createFolder:(Item *)item {
-    NSLog(@"Create: %@",item.path);
+    //NSLog(@"Create: %@",item.path);
     
     NSError *error = nil;
     [self->fileManager createDirectoryAtPath:item.path

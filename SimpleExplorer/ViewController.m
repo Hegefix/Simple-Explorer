@@ -166,7 +166,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     if (self->fileManager.copiedItem != nil) {
-        NSLog(@"НЕ удален скопированный файл");
+        Item *item = [[Item alloc] initWithPath:self->fileManager.copiedItem.name isFile:self->fileManager.copiedItem.isFile];
+        [self->fileManager deleteItem:item];
     }
 }
 
