@@ -408,7 +408,8 @@
             
             [self->fileManager createFolder:newItem];
             [self->outlineView reloadItem:node.parent reloadChildren:true];
-            
+            [self->tableDataSource addItem:newItem];
+            [self->tableView reloadData];
         }
         
     } else {
